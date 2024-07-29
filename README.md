@@ -13,6 +13,7 @@ gerenciamento de transações financeiras.
 2. Descompactar a pasta do projeto
 3. Aceder a pasta pelo terminar
 4. executar o comando **npm install** ou **npm i** para instalar as dependencias necessárias
+5. executar **npm run dev** para subir o servidor
 
 Nota: o aquiro request.http contem alguns dos testes feitos na API, pode ainda ser usado como guia
 
