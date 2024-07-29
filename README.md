@@ -17,5 +17,5 @@ gerenciamento de transações financeiras.
 
 Nota: o aquiro request.http contem alguns dos testes feitos na API, pode ainda ser usado como guia
 
-Nota2: apenas duas rotas são acessas sem autenticação a de **cadastro e login** de usuarios, as demais precisa-se passar um token de autorização via headers na posição **x-access-token**  que é dado no login do usuario.
+Nota2: apenas duas rotas são acessas sem autenticação a de **cadastro e login** de usuarios, as demais precisa-se passar um token de autorização via headers na posição **x-access-token**  que é dado no login do usuario e o token é válido por apenas 5min e depois será descontinuado e solicitará outro login.
 ex: x-access-token:seuTokenDeAutorizacao 
