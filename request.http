@@ -1,0 +1,66 @@
+POST http://localhost:4646/users/cadastro
+content-type: application/json
+
+{
+  "fullname":"Miguel Tchaquarta", 
+  "nif":"2321424324", 
+  "email":"mike@hotmail.com", 
+  "senha":"minhasenha",
+  "tipoUsuario":"prestador",
+  "servicos":{
+    "titulo":"Canalisador",
+    "descricao":"montagem de sistemas de canalizacao dimiciliar e empresarial",
+    "preco":3500
+  }
+}
+###
+POST http://localhost:4646/users/cadastro
+content-type: application/json
+
+{
+  "fullname":"Pedro Tchaquarta", 
+  "nif":"43214325325436", 
+  "email":"pedro@hotmail.com", 
+  "senha":"minhasenha",
+  "tipoUsuario":"cliente"
+}
+###
+POST http://localhost:4646/users/login
+content-type: application/json
+
+{
+  "email":"pedro@hotmail.com",
+  "senha":"minhasenha"
+}
+###
+POST http://localhost:4646/users/contratar
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjIxNzQzMjgsImV4cCI6MTcyMjE3NDYyOH0.wBy0giWfbf2DXMxf3oCH0bXbo8DRfS7KfhAuQtGmmBE
+###
+GET http://localhost:4646/users/todos
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjIxODkxMDMsImV4cCI6MTcyMjE4OTQwM30.a5htqr5mx8VWmGZ48uqMFImKo8KFBAnNOvDZdBKdT9E
+###
+
+POST http://localhost:4646/prestadores/novo-servico
+content-type: application/json
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjIyNjMxMTQsImV4cCI6MTcyMjI2MzQxNH0.hpGolrILFqEAzmsKuiRBqDD_0hrKZkktiAzMnUUDrGc
+
+{
+  "idPrestador":"89bebcd5-6ddd-49db-b029-902d86884633", 
+  "titulo":"Lavador de Carros2", 
+  "descricao":"lavagem de carros ao domicilio", 
+  "preco":"12030"
+}
+
+###
+GET http://localhost:4646/clientes/listar-servicos
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjIyOTUxMzUsImV4cCI6MTcyMjI5NTQzNX0.DgAPNkzBm16e91nipN7slfL9ENPHxpbMNyANDVsF5vM
+
+###
+POST http://localhost:4646/clientes/contratar
+content-type: application/json
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjIyOTUxMzUsImV4cCI6MTcyMjI5NTQzNX0.DgAPNkzBm16e91nipN7slfL9ENPHxpbMNyANDVsF5vM
+
+{
+  "clientID":"a87452db-744f-47c3-b05b-d9aab9c7f46e", 
+  "serviceID":"5df79862-6da6-4865-b617-6a6af969c75d"
+}
